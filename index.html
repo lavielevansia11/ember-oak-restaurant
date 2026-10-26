@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ember &amp; Oak — Wood-Fired Kitchen</title>
+  <meta name="description" content="Ember & Oak is a wood-fired neighborhood restaurant serving seasonal, fire-cooked food." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand">Ember <span>&amp;</span> Oak</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#visit">Visit</a>
+        <a href="#reserve" class="btn btn-small">Reserve</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-media" role="img" aria-label="Wood-fired dishes on a rustic table"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">Wood-fired kitchen · Portland</p>
+        <h1>Cooked over live fire, every single night.</h1>
+        <p class="lede">Seasonal vegetables, house-milled breads and pasture-raised meats from a hearth that never goes cold.</p>
+        <div class="hero-actions">
+          <a href="#reserve" class="btn">Book a table</a>
+          <a href="#menu" class="btn btn-ghost">See the menu</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="strip">
+      <div class="container strip-inner">
+        <div><strong>Open</strong><span>Tue–Sun, 5–10pm</span></div>
+        <div><strong>Find us</strong><span>412 Alder St, Portland</span></div>
+        <div><strong>Call</strong><span>(503) 555-0147</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">The menu</p>
+          <h2>Small plates from the hearth</h2>
+          <p class="section-sub">The menu changes with what the farms send us. Here's what's on fire this week.</p>
+        </div>
+
+        <div class="filters" role="tablist" aria-label="Menu categories">
+          <button class="filter is-active" data-filter="all">All</button>
+          <button class="filter" data-filter="starters">Starters</button>
+          <button class="filter" data-filter="mains">Mains</button>
+          <button class="filter" data-filter="sides">Sides</button>
+          <button class="filter" data-filter="desserts">Desserts</button>
+        </div>
+
+        <ul class="menu-grid" id="menu-grid">
+          <li class="menu-card" data-category="starters">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1541544181051-e46607bc22a4?auto=format&fit=crop&w=600&q=60')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-title"><h3>Charred bread &amp; cultured butter</h3><span class="price">$9</span></div>
+              <p>Sourdough from our own mill, smoked sea salt, chive butter.</p>
+            </div>
+          </li>
+          <li class="menu-card" data-category="starters">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=600&q=60')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-title"><h3>Grilled oysters</h3><span class="price">$18</span></div>
+              <p>Half dozen, brown butter, fermented chili, lemon.</p>
+            </div>
+          </li>
+          <li class="menu-card" data-category="mains">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=60')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-title"><h3>Hearth ribeye</h3><span class="price">$46</span></div>
+              <p>45-day dry aged, ember-roasted onions, bone marrow jus.</p>
+            </div>
+          </li>
+          <li class="menu-card" data-category="mains">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1432139555190-58524dae6a55?auto=format&fit=crop&w=600&q=60')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-title"><h3>Whole roasted branzino</h3><span class="price">$34</span></div>
+              <p>Fennel, preserved lemon, salsa verde for two.</p>
+            </div>
+          </li>
+          <li class="menu-card" data-category="mains">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=600&q=60')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-title"><h3>Wood-fired mushroom tart</h3><span class="price">$24</span></div>
+              <p>King oyster, thyme, aged sheep's cheese, wild garlic.</p>
+            </div>
+          </li>
+          <li class="menu-card" data-category="sides">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=60')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-title"><h3>Blistered greens</h3><span class="price">$11</span></div>
+              <p>Coal-roasted broccolini, garlic confit, chili crisp.</p>
+            </div>
+          </li>
+          <li class="menu-card" data-category="starters">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=600&q=60')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-title"><h3>Hand-cut tagliatelle</h3><span class="price">$21</span></div>
+              <p>Brown butter, sage, toasted hazelnut, aged parmesan.</p>
+            </div>
+          </li>
+          <li class="menu-card" data-category="desserts">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=600&q=60')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-title"><h3>Ember-baked fruit</h3><span class="price">$12</span></div>
+              <p>Seasonal stone fruit, vanilla cream, oat crumble.</p>
+            </div>
+          </li>
+          <li class="menu-card" data-category="desserts">
+            <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=600&q=60')"></div>
+            <div class="menu-card-body">
+              <div class="menu-card-title"><h3>Smoked chocolate pot</h3><span class="price">$13</span></div>
+              <p>Dark ganache, olive oil, flaky salt, sourdough tuile.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="about">
+      <div class="container about-grid">
+        <div class="about-media" role="img" aria-label="Chef working at the hearth"></div>
+        <div class="about-text">
+          <p class="eyebrow">Our story</p>
+          <h2>One fire. Ten years of tending it.</h2>
+          <p>Ember &amp; Oak started as a farmers' market bread stall in 2015. Today we cook everything over a single oak-fired hearth — the same one that taught us patience, and that bread is worth doing properly.</p>
+          <p>We work with twelve farms within 100 miles, mill our own grain, and change the menu whenever the season tells us to.</p>
+          <ul class="about-points">
+            <li>100% oak-fired cooking</li>
+            <li>Farm partnerships within 100 miles</li>
+            <li>House-milled flour daily</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reserve">
+      <div class="container reserve-grid">
+        <div class="reserve-text">
+          <p class="eyebrow">Reservations</p>
+          <h2>Save yourself a seat by the fire.</h2>
+          <p class="section-sub">Tables open 30 days ahead. For parties of seven or more, give us a call and we'll sort something out.</p>
+        </div>
+        <form class="reserve-form" id="reserve-form" novalidate>
+          <div class="field-row">
+            <label class="field">
+              <span>Name</span>
+              <input type="text" name="name" required placeholder="Your name" />
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input type="email" name="email" required placeholder="you@example.com" />
+            </label>
+          </div>
+          <div class="field-row">
+            <label class="field">
+              <span>Date</span>
+              <input type="date" name="date" required />
+            </label>
+            <label class="field">
+              <span>Guests</span>
+              <select name="guests" required>
+                <option value="2">2 guests</option>
+                <option value="1">1 guest</option>
+                <option value="3">3 guests</option>
+                <option value="4">4 guests</option>
+                <option value="5">5 guests</option>
+                <option value="6">6 guests</option>
+              </select>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-block">Request a table</button>
+          <p class="form-note" id="form-note" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="visit">
+      <div class="container visit-grid">
+        <div>
+          <p class="eyebrow">Visit</p>
+          <h2>412 Alder St, Portland</h2>
+          <p class="section-sub">Two blocks from the Alder streetcar stop. Street parking after 6pm.</p>
+          <dl class="hours">
+            <div><dt>Tuesday – Thursday</dt><dd>5:00pm – 10:00pm</dd></div>
+            <div><dt>Friday – Saturday</dt><dd>5:00pm – 11:00pm</dd></div>
+            <div><dt>Sunday</dt><dd>4:00pm – 9:00pm</dd></div>
+            <div><dt>Monday</dt><dd>Closed</dd></div>
+          </dl>
+        </div>
+        <div class="visit-card">
+          <h3>Get in touch</h3>
+          <p><strong>Phone</strong><br />(503) 555-0147</p>
+          <p><strong>Email</strong><br />hello@emberandoak.example</p>
+          <p><strong>Private events</strong><br />The back room seats 20, hearth included.</p>
+          <a href="#reserve" class="btn btn-block">Book a table</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="brand">Ember <span>&amp;</span> Oak</span>
+      <p>© 2026 Ember &amp; Oak. Cooked over live fire in Portland, OR.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
